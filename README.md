@@ -5,7 +5,7 @@ Este repositório contém a solução para a avaliação técnica de Analista de
 ## Estrutura
 - **documentacao**: Documentação do processo (histórias de usuário, requisitos, regras, notificações).
 - **bizagi**: Fluxo do processo modelado no Bizagi (PDF).
-- **automacao**: Microserviço Spring Boot para coleta e processamento de dados.
+- **automacao**: Backend em Spring Boot e fronten em Angular para coleta e processamento de dados.
 - **powerbi**: Dashboard Power BI para monitoramento dos ANS.
 
 ## Instruções
