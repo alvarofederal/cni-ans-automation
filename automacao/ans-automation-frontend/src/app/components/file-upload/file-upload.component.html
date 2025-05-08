@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Upload de Arquivo Excel</h2>
+    <div class="upload-section">
+      <input type="file" (change)="onFileSelected($event)" accept=".xlsx" id="fileInput" />
+      <button (click)="upload()" [disabled]="!selectedFile" class="upload-button">Enviar</button>
+    </div>
+    <p *ngIf="message" class="message">{{ message }}</p>
+  </div>
