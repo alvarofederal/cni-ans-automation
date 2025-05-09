@@ -1,1 +1,137 @@
-/* You can add global styles to this file, and also import other style files */
+.toolbar {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px; /* Fonte ajustada para destacar a toolbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garantir que a toolbar fique acima de outros elementos */
+  }
+  
+  .toolbar-placeholder {
+    height: 50px; /* Altura da toolbar (padding: 15px + font-size: 20px + margens) */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .my-3 {
+    margin: 20px 0;
+  }
+  
+  .upload-section {
+    margin: 20px 0;
+  }
+  
+  input[type="file"] {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .upload-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .upload-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .message {
+    margin-top: 20px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  th:nth-child(2), td:nth-child(2) { /* Superintendência */
+    width: 300px;
+  }
+  
+  th:nth-child(3), td:nth-child(3) { /* Indicador */
+    width: 300px;
+  }
+  
+  th:nth-child(1), td:nth-child(1), /* ID Indicador */
+  th:nth-child(4), td:nth-child(4), /* Meta 2024 */
+  th:nth-child(5), td:nth-child(5) { /* Real 2024 */
+    width: 80px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .pagination {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .pagination-button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 12px;
+  }

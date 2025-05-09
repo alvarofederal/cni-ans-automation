@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Angular 16 File Upload example';
+  title = 'Acordos de Níveis de Serviços';
 }

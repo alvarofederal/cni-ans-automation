@@ -1,8 +1,35 @@
-<div class="container">
-    <h2>Upload de Arquivo Excel</h2>
-    <div class="upload-section">
-      <input type="file" (change)="onFileSelected($event)" accept=".xlsx" id="fileInput" />
-      <button (click)="upload()" [disabled]="!selectedFile" class="upload-button">Enviar</button>
+<h3 class="toolbar">ANS - Acordos de Níveis de Serviços</h3>
+<div class="toolbar-placeholder"></div>
+
+  <div class="upload-section centered">
+    <input type="file" (change)="onFileSelected($event)" accept=".xlsx" id="fileInput" />
+    <button (click)="upload()" [disabled]="!selectedFile" class="upload-button">Enviar</button>
+  </div>
+  <p *ngIf="message" class="message centered">{{ message }}</p>
+  <div *ngIf="records.length > 0" class="table-container centered">
+    <table>
+      <thead>
+        <tr>
+          <th>ID Indicador</th>
+          <th>Superintendência</th>
+          <th>Indicador</th>
+          <th>Meta 2024</th>
+          <th>Real 2024</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of paginatedRecords">
+          <td>{{ record.indicadorId }}</td>
+          <td>{{ record.superintendencia }}</td>
+          <td>{{ record.indicador }}</td>
+          <td>{{ record.meta2024 }}</td>
+          <td>{{ record.real2024 }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button (click)="previousPage()" [disabled]="currentPage === 1" class="pagination-button">Anterior</button>
+      <span>Página {{ currentPage }} de {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="pagination-button">Próximo</button>
     </div>
-    <p *ngIf="message" class="message">{{ message }}</p>
   </div>
